@@ -1,10 +1,10 @@
 import {StyleSheet, Text} from "react-native";
 import {SafeAreaView} from "react-native-safe-area-context";
 
-export default function HomeScreen() {
+export default function SearchScreen() {
     return (
         <SafeAreaView style={styles.container}>
-            <Text style={styles.text}>Home screen</Text>
+            <Text style={styles.text}>Search Movie</Text>
         </SafeAreaView>
     )
 }
