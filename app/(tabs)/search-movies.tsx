@@ -127,7 +127,6 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 32,
         fontFamily: 'Manrope-Bold',
-        marginTop: 20,
         marginBottom: 24,
     },
     searchContainer: {

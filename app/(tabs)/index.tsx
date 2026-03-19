@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, View, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import MovieSwiper from "@/entities/trending-movies/ui/movie-swiper";
 import MovieList from "@/entities/trending-movies/ui/movie-list";
@@ -28,11 +28,6 @@ export default function HomeScreen() {
                 contentContainerStyle={styles.scrollContent}
                 showsVerticalScrollIndicator={false}
             >
-                <View style={styles.header}>
-                    <View style={styles.logoContainer}>
-                        <Text style={styles.logoText}>M</Text>
-                    </View>
-                </View>
 
                 <MovieSwiper title="Trending Movies" movies={trendingMovies} loading={isLoading} />
                 <MovieList title="Popular Movies" movies={popularMovies} loading={isLoading} />
@@ -51,7 +46,6 @@ const styles = StyleSheet.create({
     },
     scrollContent: {
         flexGrow: 1,
-        paddingTop: 10,
     },
     header: {
         alignItems: 'center',

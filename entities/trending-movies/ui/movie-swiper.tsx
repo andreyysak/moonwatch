@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     },
     container: {
         backgroundColor: '#111113',
-        marginVertical: 15,
     },
     title: {
         color: '#fff',

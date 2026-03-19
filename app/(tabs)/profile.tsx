@@ -92,12 +92,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     scrollContent: {
-        paddingHorizontal: 24,
         paddingBottom: 40,
     },
     header: {
         alignItems: 'center',
-        marginTop: 20,
         marginBottom: 32,
     },
     imageWrapper: {
