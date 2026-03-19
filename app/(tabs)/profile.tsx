@@ -41,7 +41,7 @@ export default function ProfileScreen() {
                             style={styles.profileImage}
                         />
                     </View>
-                    <Text style={styles.userName}>{user?.googleName || "Користувач"}</Text>
+                    <Text style={styles.userName}>{user?.googleName || "User"}</Text>
                     <Text style={styles.userEmail}>{user?.email}</Text>
                 </View>
 
@@ -52,7 +52,7 @@ export default function ProfileScreen() {
                                 <Ionicons name="shield-checkmark-outline" size={20} color="#df0707" />
                             </View>
                             <View>
-                                <Text style={styles.infoLabel}>Роль</Text>
+                                <Text style={styles.infoLabel}>Role</Text>
                                 <Text style={styles.infoValue}>{user?.role?.toUpperCase()}</Text>
                             </View>
                         </View>
@@ -64,7 +64,7 @@ export default function ProfileScreen() {
                                 <Ionicons name="calendar-outline" size={20} color="#df0707" />
                             </View>
                             <View>
-                                <Text style={styles.infoLabel}>Дата реєстрації</Text>
+                                <Text style={styles.infoLabel}>In system from</Text>
                                 <Text style={styles.infoValue}>{formatDate(user?.created_at)}</Text>
                             </View>
                         </View>
@@ -73,7 +73,7 @@ export default function ProfileScreen() {
 
                 <TouchableOpacity style={styles.logoutButton} onPress={logout}>
                     <Ionicons name="log-out-outline" size={20} color="#fff" />
-                    <Text style={styles.logoutText}>Вийти з акаунту</Text>
+                    <Text style={styles.logoutText}>Logout</Text>
                 </TouchableOpacity>
             </ScrollView>
         </SafeAreaView>
