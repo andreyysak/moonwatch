@@ -1,5 +1,6 @@
 import { MovieTrending } from "@/entities/trending-movies/model/types";
 import { ActivityIndicator, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {useRouter} from "expo-router";
 
 interface Props {
     title: string;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export default function MovieList({ title, movies, loading }: Props) {
+    const router = useRouter()
+
     if (loading) {
         return (
             <View style={styles.loadingContainer}>
@@ -32,6 +35,7 @@ export default function MovieList({ title, movies, loading }: Props) {
                 renderItem={({ item }) => (
                     <TouchableOpacity
                         style={styles.card}
+                        onPress={() => router.push(`/movie/${item.id}`)}
                     >
                         <Image
                             source={{ uri: `https://image.tmdb.org/t/p/w342${item.poster_path}` }}

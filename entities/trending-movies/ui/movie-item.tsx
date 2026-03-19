@@ -1,14 +1,18 @@
 import { MovieTrending } from "@/entities/trending-movies/model/types";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {useRouter} from "expo-router";
 
 interface Props {
     movie: MovieTrending;
 }
 
 export default function MovieItem({ movie }: Props) {
+    const router = useRouter()
+
     return (
         <TouchableOpacity
             style={styles.card}
+            onPress={() => router.push(`/movie/${movie.id}`)}
         >
             <Image
                 source={{ uri: `https://image.tmdb.org/t/p/w500${movie.poster_path}` }}
